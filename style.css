@@ -1,0 +1,232 @@
+/* =================================
+   RESET
+   ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   BODY
+   ================================= */
+
+body {
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    /* Similar pastel background
+       to the given screenshot */
+
+    background: linear-gradient(
+        110deg,
+        #d9ecff 0%,
+        #e7d9f5 25%,
+        #f3c9e5 50%,
+        #ffd5d5 75%,
+        #ffe8ae 100%
+    );
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =================================
+   MAIN GALLERY
+   ================================= */
+
+.gallery {
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* =================================
+   COMMON FOOD BOX
+   ================================= */
+
+.food {
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    background-color: white;
+
+    overflow: hidden;
+
+    /* Creates diamond */
+
+    transform: rotate(45deg);
+
+    /* Transition */
+
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.6s ease;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+    z-index: 1;
+}
+
+
+/* =================================
+   FOOD IMAGE
+   ================================= */
+
+.food img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    /*
+       Rotate image back
+       and enlarge it so
+       corners are covered
+    */
+
+    transform:
+        rotate(-45deg)
+        scale(1.42);
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+/* =================================
+   1. PIZZA
+   TOP LEFT
+   ================================= */
+
+.food1 {
+
+    position: absolute;
+
+    top: -50px;
+    left: 20px;
+}
+
+
+/* =================================
+   2. BURGER
+   TOP CENTER
+   ================================= */
+
+.food2 {
+
+    position: absolute;
+
+    top: -50px;
+    left: 43%;
+}
+
+
+/* =================================
+   3. BIRYANI
+   CENTER LEFT
+   ================================= */
+
+.food3 {
+
+    position: absolute;
+
+    top: 300px;
+    left: 25%;
+}
+
+
+/* =================================
+   4. PASTA
+   BOTTOM LEFT
+   ================================= */
+
+.food4 {
+
+    position: absolute;
+
+    bottom: 80px;
+    left: 20px;
+}
+
+
+/* =================================
+   5. CAKE
+   BOTTOM CENTER
+   ================================= */
+
+.food5 {
+
+    position: absolute;
+
+    bottom: 80px;
+    left: 43%;
+}
+
+
+/* =================================
+   6. DOSA
+   CENTER RIGHT
+   ================================= */
+
+.food6 {
+
+    position: absolute;
+
+    top: 500px;
+    left: 75%;
+}
+
+
+/* =================================
+   HOVER EFFECT
+   ================================= */
+
+.food:hover {
+
+    /*
+       Keep diamond shape
+       and increase size
+    */
+
+    transform:
+        rotate(45deg)
+        scale(1.15);
+
+    /*
+       Put hovered image
+       above other images
+    */
+
+    z-index: 20;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =================================
+   IMAGE HOVER
+   ================================= */
+
+.food:hover img {
+
+    transform:
+        rotate(-45deg)
+        scale(1.55);
+}
